@@ -1,0 +1,218 @@
+@font-face {
+  font-family: poppins;
+  src: url("font/Poppins-light.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: helvetica;
+}
+
+nav {
+  position: relative;
+  top: 0;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #e4e4e4;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+nav h1 {
+  text-align: center;
+  font-family: poppins;
+}
+nav .search {
+  display: flex;
+  justify-content: space-between;
+  padding: 1px 10px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+nav .search button {
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+}
+nav .search img {
+  width: 20px;
+}
+nav .search .input-field {
+  display: flex;
+}
+nav .search .input-field input {
+  outline: none;
+  border: 1px solid #000;
+  padding: 0px 10px;
+  border-radius: 17px;
+}
+nav .search .input-field img {
+  padding: 10px;
+  border-radius: 50%;
+  margin-left: -40px;
+  margin-top: 3px;
+}
+nav .user {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+nav .user img {
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+section {
+  display: flex;
+}
+section aside {
+  flex: 1;
+  height: 100vh;
+  background-color: #fff;
+}
+section aside button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  padding: 10px 5px;
+  padding-left: 25px;
+  font-size: 1.2em;
+  border: none;
+  text-align: left;
+  text-transform: capitalize;
+}
+section aside button img {
+  width: 20px;
+  margin-right: 8px;
+}
+section aside button:hover {
+  background-color: #a6daff;
+  color: #002fa7;
+  border-left: 4px solid #002fa7;
+  cursor: pointer;
+}
+section article {
+  flex: 3;
+  padding-bottom: 190px;
+  background-color: #cbeae7;
+}
+section article .title {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  background-color: #79c7ff;
+  height: 20vh;
+  width: 74%;
+  padding-left: 20px;
+  font-size: 1.5em;
+}
+section article .blogs {
+  position: relative;
+  z-index: 1;
+  top: 90px;
+  left: 20px;
+  width: 96%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+section article button {
+  width: 60px;
+  font-size: 1em;
+  font-family: poppins;
+  color: #007706;
+  background-color: #97fc9c;
+  padding: 3px;
+  border: none;
+  border-radius: 15px;
+}
+section article #hygene {
+  width: 65px;
+  color: #080077;
+  background-color: #a197fc;
+}
+section article #travel {
+  width: 75px;
+  color: #770000;
+  background-color: #fc9797;
+}
+section article #health {
+  width: 75px;
+  color: #5f0077;
+  background-color: #f497fc;
+}
+section article .card {
+  display: flex;
+  row-gap: 10px;
+  width: 200px;
+  padding: 10px;
+  flex-direction: column;
+  text-align: left;
+  background-color: #ffffff;
+}
+section article .card h3 {
+  font-size: 1.1em;
+  font-weight: 550;
+}
+section article .card .card-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 0.8em;
+  padding: 5px;
+  margin-top: 5px;
+  border-top: 1px solid #000;
+}
+section article .card .card-details .user {
+  display: flex;
+  align-items: center;
+}
+section article .card .card-details .user img {
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+section article .card .card-details span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  font-size: 0.8em;
+  gap: 10px;
+  bottom: 0;
+  background-color: #fff;
+}
+footer .contact {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+footer .contact img {
+  width: 30px;
+}
+
+@media (max-width: 650px) {
+  .card:hover {
+    cursor: pointer;
+  }
+  .card p {
+    display: none;
+  }
+  .card .card-details {
+    visibility: hidden;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

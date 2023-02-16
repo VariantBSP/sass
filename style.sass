@@ -1,0 +1,205 @@
+@font-face 
+    font-family: poppins
+    src: url("font/Poppins-light.ttf")
+
+    
+$secondary: #fff
+$blue:  #79c7ff
+$light: #cbeae7
+$sky: #a6daff
+$dark: #002fa7
+
+@mixin flex-align
+    display: flex
+    align-items: center
+
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    font-family: helvetica
+
+nav
+    position: relative
+    top: 0
+    padding: 10px
+    background-color: $secondary
+    border-bottom: 1px solid #e4e4e4
+    display: grid
+    align-items: center
+    grid-template-columns: 1fr 2fr 1fr
+    h1
+        text-align: center
+        font-family: poppins
+
+    .search
+        display: flex
+        justify-content: space-between
+        padding: 1px 10px
+        border-left: 1px solid #ccc
+        border-right: 1px solid #ccc
+        button
+            border: none
+            padding: 10px
+            border-radius: 50%
+        img
+            width: 20px
+        .input-field
+
+            display: flex
+            input
+                outline: none
+                border: 1px solid #000
+                padding: 0px 10px 
+                border-radius: 17px
+            img
+                padding: 10px
+                border-radius: 50%
+                margin-left: -40px
+                margin-top: 3px
+
+
+    .user
+        @include flex-align
+        
+        padding-left: 10px
+        img
+            width: 30px
+            border-radius: 50%
+            margin-right: 5px
+
+
+section
+    display: flex
+    aside   
+        flex: 1
+        height: 100vh
+        background-color:$secondary
+        button
+            @include flex-align
+            width: 100%
+            background: transparent
+            padding: 10px 5px
+            padding-left: 25px
+            font-size: 1.2em
+            border: none
+            text-align: left
+            text-transform: capitalize
+            img
+                width: 20px
+                margin-right: 8px
+            &:hover
+                background-color: $sky
+                color: $dark
+                border-left: 4px solid $dark
+                cursor: pointer
+
+    article
+        flex: 3
+        padding-bottom: 190px
+        background-color: $light
+        .title
+            @include flex-align
+            position: absolute
+            z-index: 1
+            background-color: $blue
+            height:20vh
+            width: 74%
+            padding-left: 20px
+            font-size: 1.5em
+
+        .blogs
+            position: relative
+            z-index: 1
+            top: 90px
+            left: 20px
+            width: 96%
+            display: flex
+            flex-wrap: wrap
+            gap: 18px
+
+        button
+            width: 60px
+            font-size: 1em
+            font-family: poppins
+            color: #007706
+            background-color: #97fc9c
+            padding: 3px
+            border: none
+            border-radius: 15px
+        
+        #hygene
+            width: 65px
+            color: #080077
+            background-color: #a197fc
+
+        #travel
+            width: 75px
+            color: #770000
+            background-color: #fc9797
+
+        #health
+            width: 75px
+            color: #5f0077
+            background-color: #f497fc
+
+
+        .card
+            display: flex
+            row-gap: 10px
+            width: 200px
+            padding: 10px
+            flex-direction: column
+            text-align: left
+            background-color: #ffffff
+
+            h3
+                font-size: 1.1em
+                font-weight: 550
+
+            .card-details
+                display: grid
+                grid-template-columns: 1fr 1fr
+                font-size: 0.8em
+                padding: 5px
+                margin-top: 5px
+                border-top: 1px solid #000
+                .user
+                    @include flex-align
+                    img
+                        width: 30px
+                        border-radius: 50%
+                        margin-right: 5px
+                span
+                    display: flex
+                    align-items: center
+                    justify-content: flex-end
+      
+footer
+    @include flex-align
+    position: fixed
+    z-index: 10
+    flex-direction: column
+    width: 100%
+    padding:10px
+    font-size: 0.8em
+    gap: 10px
+    bottom: 0
+    background-color: #fff
+    .contact
+        display: flex
+        justify-content: center
+        gap: 10px
+        img
+            width:30px
+
+@media (max-width: 650px)
+    .card
+        &:hover
+            cursor: pointer
+        p
+            display: none
+        .card-details
+            visibility: hidden
+            
